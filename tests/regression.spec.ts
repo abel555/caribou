@@ -17,17 +17,27 @@ test.describe('Regression test suite', async ()=> {
     await homePage.goto('/');
   });
 
-  test('Login button should redirect to login page', async ({page})=>{	
+  test('Login button should redirect to login page', async ()=>{	
   	const loginPage = await homePage.navigateToLogin();
     await expect(loginPage.pageHeader()).toBeVisible();
   });
 
-  test('Get started should load personal info form', async ({page}) => {
+  test('Get started should load personal info form', async () => {
     const personalInfoPage: PersonalInfoPage = await homePage.clickGetStarted();
     await expect(personalInfoPage.pageTitle()).toBeVisible();
   });
 
-  test('User should be able to complete all the loan forms', async({page}) => {
+  test('Check rate button should load personal info form', async () => {
+    const personalInfoPage: PersonalInfoPage = await homePage.clickCheckRate();
+    await expect(personalInfoPage.pageTitle()).toBeVisible();
+  });
+
+  test('See savings button should load personal info form', async () => {
+    const personalInfoPage: PersonalInfoPage = await homePage.clickGetStarted();
+    await expect(personalInfoPage.pageTitle()).toBeVisible();
+  });
+
+  test('User should be able to complete all the loan forms', async() => {
   	const personalInfo = getDefaultPersonalInfo();
   	const vehicleInfo = getDefaultVehicleInfo();
   	const residenceInfo = getDefaultResidenceInfo();

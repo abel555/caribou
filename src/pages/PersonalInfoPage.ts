@@ -56,7 +56,7 @@ export class PersonalInfoPage {
         await this.citizenStatus().selectOption(info.citizenStatus);
         await this.cellPhone().fill(info.cellPhone);
     }
-    //https://new.apply.caribou.com/vehicle-info
+
     public async clickContinue(): Promise<VehicleInfoPage> {
         await Promise.all([
             this.page.waitForURL('**/vehicle-info', { timeout: 10000 }),

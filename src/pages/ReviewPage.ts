@@ -28,4 +28,3 @@ export class ReviewPage {
          return this.page;
     }
 }
-//https://apply.caribou.com/loan_applications/3828388/pending

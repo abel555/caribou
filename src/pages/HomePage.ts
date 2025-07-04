@@ -35,12 +35,20 @@ export class HomePage {
         return new PersonalInfoPage(this.page);
     }
 
-    public async clickCheckRate(): Promise<void> {
-        await this.checkRateBtn().click();
+    public async clickCheckRate(): Promise<PersonalInfoPage> {
+        await Promise.all([
+            this.page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 60000 }),
+            this.checkRateBtn().click()
+        ]);
+        return new PersonalInfoPage(this.page);
     }
 
-    public async clickSeeSavings(): Promise<void> {
-        await this.seeSavingsBtn().click();
+    public async clickSeeSavings(): Promise<PersonalInfoPage> {
+        await Promise.all([
+            this.page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 60000 }),
+            this.seeSavingsBtn().click()
+        ]);
+        return new PersonalInfoPage(this.page);
     }
 
     public async clickHowItWorks(): Promise<void> {
