@@ -9,16 +9,6 @@ This project is an automated test framework built with [Playwright](https://play
 - **Page Object Model (POM)** to structure page interactions
 - **HTML Reporter** for readable visual test results
 
-## Project Structure
-
-caribou-playwright-tests/
-    src/
-        pages/ # Page Object classes (HomePage, PersonalInfoPage, etc.)
-        models/ # Mock data models and helpers
-    tests/ # All test specs
-    playwright.config.ts # Playwright test configuration
-     README.md # Project documentation
-
 ## Setup Instructions
 
 1. **Clone the repo**
