@@ -13,7 +13,7 @@ This project is an automated test framework built with [Playwright](https://play
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/yourusername/caribou-playwright-tests.git
+   git clone https://github.com/abel555/caribou.git
    cd caribou-playwright-tests
 2. **Install dependencies**
     ```bash
