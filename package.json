@@ -1,0 +1,22 @@
+{
+  "name": "caribou",
+  "version": "1.0.0",
+  "description": "this repository is for learning purpose only\r # Requirements",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abel555/caribou.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abel555/caribou/issues"
+  },
+  "homepage": "https://github.com/abel555/caribou#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10"
+  }
+}
