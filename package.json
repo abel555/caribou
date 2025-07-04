@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "this repository is for learning purpose only\r # Requirements",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "regression-tests": "npx playwright test regression.spec.ts",
+    "all-tests":"npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abel555/caribou.git"

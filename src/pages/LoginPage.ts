@@ -7,15 +7,15 @@ export class LoginPage {
         this.page = page;
     }
 
-    private pageHeader = () => this.page.getByText('Welcome back!');
+    public pageHeader = () => this.page.getByText('Welcome back!');
     private emailInput = () => this.page.locator('#email');
     private continueBtn = () => this.page.locator('#submit-email');
 
-    public fillEmailAdress(email: string) {
-        this.emailInput().fill(email);
+    public async fillEmailAdress(email: string) {
+        await this.emailInput().fill(email);
     }
 
-    public clickContinue() {
-        this.continueBtn().click();
+    public async clickContinue() {
+        await this.continueBtn().click();
     }
 }
