@@ -12,12 +12,12 @@ This project is an automated test framework built with [Playwright](https://play
 ## Project Structure
 
 caribou-playwright-tests/
-├── src/
-│ ├── pages/ # Page Object classes (HomePage, PersonalInfoPage, etc.)
-│ └── models/ # Mock data models and helpers
-├── tests/ # All test specs
-├── playwright.config.ts # Playwright test configuration
-├── README.md # Project documentation
+    src/
+        pages/ # Page Object classes (HomePage, PersonalInfoPage, etc.)
+        models/ # Mock data models and helpers
+    tests/ # All test specs
+    playwright.config.ts # Playwright test configuration
+     README.md # Project documentation
 
 ## Setup Instructions
 
