@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test'
-
+import { PersonalInfoPage } from './PersonalInfoPage'
+import { LoginPage } from './LoginPage';
 export class HomePage {
     private page: Page;
 
@@ -13,12 +14,25 @@ export class HomePage {
     private seeSavingsBtn = () => this.page.getByRole('link', { name: 'See your savings' });
     private howItWorksBtn = () => this.page.getByRole('link', { name: 'See how it works' });
 
-    public async clickLogin(): Promise<void> {
-        await this.loginBtn().click();
+    public async goto(url: string){
+        await this.page.goto(url)
+        await this.page.waitForLoadState('domcontentloaded');
     }
 
-    public async clickGetStarted(): Promise<void> {
-        await this.getStartedBtn().click();
+    public async navigateToLogin(): Promise<LoginPage> {
+         await Promise.all([
+            this.page.waitForURL('https://dashboard.caribou.com/', { timeout: 30000 }),
+            this.loginBtn().click()
+        ]);
+        return new LoginPage(this.page);
+    }
+
+    public async clickGetStarted(): Promise<PersonalInfoPage> {
+        await Promise.all([
+            this.page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 60000 }),
+            this.getStartedBtn().click()
+        ]);
+        return new PersonalInfoPage(this.page);
     }
 
     public async clickCheckRate(): Promise<void> {
